@@ -25,3 +25,76 @@
 #container a {
   text-decoration: none;
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h2 {
+  animation: fadeIn 1s ease-in-out;
+  font-weight: bold;
+}
+
+ion-item {
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.oculto {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+//estilo inputs
+ion-item {
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 8px 0;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+ion-item:focus-within {
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+//efecto botones
+ion-button {
+  transition: transform 0.2s ease-in-out;
+}
+
+ion-button:active {
+  transform: scale(0.95); /* Efecto de presión suave */
+}
+
+ion-content {
+  --background: linear-gradient(to bottom, #0062ff, #0040ff); /* Azul degradado */
+}
+
+
+ion-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+ion-item {
+  width: 80%; /* Ajusta el tamaño de los inputs */
+}
+
+ion-button {
+  width: 80%;
+  text-align: center;
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 15px;
+}
